@@ -15,6 +15,7 @@ interface GlareHoverProps {
   playOnce?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  onClick?: () => void;
 }
 
 const GlareHover: React.FC<GlareHoverProps> = ({
@@ -31,7 +32,8 @@ const GlareHover: React.FC<GlareHoverProps> = ({
   transitionDuration = 650,
   playOnce = false,
   className = '',
-  style = {}
+  style = {},
+  onClick
 }) => {
   const hex = glareColor.replace('#', '');
   let rgba = glareColor;
@@ -98,6 +100,7 @@ const GlareHover: React.FC<GlareHoverProps> = ({
       }}
       onMouseEnter={animateIn}
       onMouseLeave={animateOut}
+      onClick={onClick}
     >
       <div ref={overlayRef} style={overlayStyle} />
       {children}

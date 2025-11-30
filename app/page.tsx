@@ -3,6 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import AgentsFlow from "@/components/AgentsFlow";
 import TeamSection from "@/components/TeamSection";
 import BentoSection from "@/components/BentoSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,13 +14,8 @@ export default function Home() {
       <TeamSection />
       <AgentsFlow />
       <BentoSection />
-      
-      {/* Placeholder for future sections */}
-      <div className="min-h-screen flex items-center justify-center py-40 px-6">
-        <p className="text-[#A1A1AA] text-sm font-[family-name:var(--font-jetbrains)] font-light">
-          [ More sections coming soon... ]
-        </p>
-      </div>
+      <ContactSection />
+      <Footer />
     </main>
   );
 }
