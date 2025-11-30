@@ -25,14 +25,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "APORION - Forming the Formless | CES 2025 Innovation Award Honoree",
+  title: "APORION - Forming the Formless",
   description: "Technology should have a heartbeat. We build emotional AI companions that understand, resonate, and physically connect with you. Forming the Formless.",
-  keywords: ["Holographic AI", "HAI", "Emotional AI", "Tata AI", "Holo-Cabin", "CES 2025", "HKUST"],
-  icons: {
-    icon: '/pics/logo_aporion.jpg',
-    shortcut: '/pics/logo_aporion.jpg',
-    apple: '/pics/logo_aporion.jpg',
-  },
+  keywords: ["Holographic AI", "HAI", "Emotional AI", "Tata AI", "HKUST", "Embodied Intelligence"],
   openGraph: {
     title: "APORION - Forming the Formless",
     description: "Technology should have a heartbeat. We build emotional AI companions that understand, resonate, and physically connect with you.",
