@@ -1,26 +1,62 @@
 @import "tailwindcss";
+@import "../components/GridScan.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Aporion Design System - Core Colors */
+  --bg-void: #050505;
+  --brand-holo: #00F0FF;
+  --brand-tata: #FFB347;
+  --brand-future: #E0E0E0;
+  --text-primary: #FFFFFF;
+  --text-muted: #A1A1AA;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* GradientText Animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
+.animate-gradient {
+  animation: gradient 8s linear infinite;
+}
+
+@theme inline {
+  /* Custom Color Palette */
+  --color-void: var(--bg-void);
+  --color-holo: var(--brand-holo);
+  --color-tata: var(--brand-tata);
+  --color-future: var(--brand-future);
+  
+  /* Typography */
+  --font-display: var(--font-syne);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
