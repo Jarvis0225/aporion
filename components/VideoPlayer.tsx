@@ -105,7 +105,7 @@ export default function VideoPlayer({ videoUrl, posterUrl, className = "" }: Vid
       onMouseLeave={() => setShowControls(isPlaying ? false : true)}
     >
       {/* Video Container with Gradient Border */}
-      <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm">
+      <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-sm aspect-video">
         {/* Video Element */}
         <video
           ref={videoRef}
