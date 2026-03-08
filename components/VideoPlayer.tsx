@@ -133,9 +133,9 @@ export default function VideoPlayer({ videoUrl, posterUrl, className = "" }: Vid
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+                className="w-24 h-24 md:w-20 md:h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300"
               >
-                <Play className="w-10 h-10 text-white ml-1" fill="white" />
+                <Play className="w-12 h-12 md:w-10 md:h-10 text-white ml-1" fill="white" />
               </motion.button>
             </motion.div>
           )}
@@ -158,7 +158,7 @@ export default function VideoPlayer({ videoUrl, posterUrl, className = "" }: Vid
                   max={duration || 0}
                   value={currentTime}
                   onChange={handleProgressChange}
-                  className="w-full h-1 bg-white/20 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-purple-500 [&::-webkit-slider-thumb]:to-pink-500 [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-3 [&::-moz-range-thumb]:h-3 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gradient-to-r [&::-moz-range-thumb]:from-purple-500 [&::-moz-range-thumb]:to-pink-500 [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:cursor-pointer"
+                  className="w-full h-1 md:h-1 bg-white/20 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 md:[&::-webkit-slider-thumb]:w-3 md:[&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-purple-500 [&::-webkit-slider-thumb]:to-pink-500 [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 md:[&::-moz-range-thumb]:w-3 md:[&::-moz-range-thumb]:h-3 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gradient-to-r [&::-moz-range-thumb]:from-purple-500 [&::-moz-range-thumb]:to-pink-500 [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:cursor-pointer"
                   style={{
                     background: `linear-gradient(to right, rgba(159, 133, 255, 1) 0%, rgba(207, 122, 201, 1) ${(currentTime / duration) * 50}%, rgba(255, 107, 139, 1) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) ${(currentTime / duration) * 100}%)`
                   }}
@@ -169,16 +169,16 @@ export default function VideoPlayer({ videoUrl, posterUrl, className = "" }: Vid
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 md:gap-3">
                 {/* Play/Pause Button */}
                 <button
                   onClick={togglePlay}
-                  className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all"
+                  className="w-10 h-10 md:w-8 md:h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all"
                 >
                   {isPlaying ? (
-                    <Pause className="w-4 h-4 text-white" fill="white" />
+                    <Pause className="w-5 h-5 md:w-4 md:h-4 text-white" fill="white" />
                   ) : (
-                    <Play className="w-4 h-4 text-white ml-0.5" fill="white" />
+                    <Play className="w-5 h-5 md:w-4 md:h-4 text-white ml-0.5" fill="white" />
                   )}
                 </button>
 
@@ -190,12 +190,12 @@ export default function VideoPlayer({ videoUrl, posterUrl, className = "" }: Vid
                 >
                   <button
                     onClick={toggleMute}
-                    className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all"
+                    className="w-10 h-10 md:w-8 md:h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all"
                   >
                     {isMuted || volume === 0 ? (
-                      <VolumeX className="w-4 h-4 text-white" />
+                      <VolumeX className="w-5 h-5 md:w-4 md:h-4 text-white" />
                     ) : (
-                      <Volume2 className="w-4 h-4 text-white" />
+                      <Volume2 className="w-5 h-5 md:w-4 md:h-4 text-white" />
                     )}
                   </button>
                   
@@ -230,17 +230,17 @@ export default function VideoPlayer({ videoUrl, posterUrl, className = "" }: Vid
                 {/* Fullscreen Button */}
                 <button
                   onClick={toggleFullscreen}
-                  className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all"
+                  className="w-10 h-10 md:w-8 md:h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all"
                 >
-                  <Maximize className="w-4 h-4 text-white" />
+                  <Maximize className="w-5 h-5 md:w-4 md:h-4 text-white" />
                 </button>
 
                 {/* Close Button */}
                 <button
                   onClick={closeVideo}
-                  className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all"
+                  className="w-10 h-10 md:w-8 md:h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all"
                 >
-                  <X className="w-4 h-4 text-white" />
+                  <X className="w-5 h-5 md:w-4 md:h-4 text-white" />
                 </button>
               </div>
             </motion.div>

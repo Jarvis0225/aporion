@@ -39,12 +39,17 @@ export default function TeamSection() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden py-20">
-      {/* GhostCursor Background */}
-      <GhostCursor color="#E8C5E8" brightness={0.35} bloomStrength={0.03} />
+      {/* Desktop: GhostCursor Background */}
+      <div className="hidden md:block">
+        <GhostCursor color="#E8C5E8" brightness={0.35} bloomStrength={0.03} />
+      </div>
       
-      {/* Edge Fade Masks for GhostCursor */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent pointer-events-none" style={{ zIndex: 5 }} />
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" style={{ zIndex: 5 }} />
+      {/* Mobile: Static Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-transparent pointer-events-none md:hidden" />
+      
+      {/* Edge Fade Masks for GhostCursor (Desktop only) */}
+      <div className="hidden md:block absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent pointer-events-none" style={{ zIndex: 5 }} />
+      <div className="hidden md:block absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" style={{ zIndex: 5 }} />
       
       {/* Background Effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40 pointer-events-none" />

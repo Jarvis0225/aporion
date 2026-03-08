@@ -62,7 +62,7 @@ export default function Footer() {
               <a href="#" className="text-zinc-500 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a> */}
-              <a href="mailto:contact@aporion.ai" className="text-zinc-500 hover:text-white transition-colors">
+              <a href="mailto:lijunwei@aporion.ai" className="text-zinc-500 hover:text-white transition-colors">
                 <Mail size={20} />
               </a>
             </div>
