@@ -14,8 +14,7 @@ export default function TeamSection() {
       subtitle: "Real-time recognition of user emotion, gestures, and spatial context.",
       handle: "@Beyond pixels",
       borderColor: "#3B82F6",
-      gradient: "linear-gradient(145deg, #3B82F6, #000)",
-      url: "#"
+      gradient: "linear-gradient(145deg, #3B82F6, #000)"
     },
     {
       image: "/pics/TATA.png",
@@ -23,8 +22,7 @@ export default function TeamSection() {
       subtitle: "Proprietary LLM orchestration with long-term memory and personality imprinting.",
       handle: "@The brain",
       borderColor: "#10B981",
-      gradient: "linear-gradient(210deg, #10B981, #000)",
-      url: "#"
+      gradient: "linear-gradient(210deg, #10B981, #000)"
     },
     {
       image: "/pics/AICORUMI.png",
@@ -32,17 +30,14 @@ export default function TeamSection() {
       subtitle: "Full-duplex interaction with hyper-realistic tone matching and adaptive emotional modulation.",
       handle: "@The soul",
       borderColor: "#F59E0B",
-      gradient: "linear-gradient(165deg, #F59E0B, #000)",
-      url: "#"
+      gradient: "linear-gradient(165deg, #F59E0B, #000)"
     }
   ];
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden py-20">
       {/* Desktop: GhostCursor Background */}
-      <div className="hidden md:block">
-        <GhostCursor color="#E8C5E8" brightness={0.35} bloomStrength={0.03} />
-      </div>
+      <GhostCursor className="hidden md:block" color="#E8C5E8" brightness={0.35} bloomStrength={0.03} />
       
       {/* Mobile: Static Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-transparent pointer-events-none md:hidden" />

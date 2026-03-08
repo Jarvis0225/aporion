@@ -10,9 +10,7 @@ export default function VideoSection() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden pt-36 pb-20">
       {/* Desktop: GhostCursor Background */}
-      <div className="hidden md:block">
-        <GhostCursor color="#E8C5E8" brightness={0.35} bloomStrength={0.03} />
-      </div>
+      <GhostCursor className="hidden md:block" color="#E8C5E8" brightness={0.35} bloomStrength={0.03} />
       
       {/* Mobile: Static Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-transparent pointer-events-none md:hidden" />
