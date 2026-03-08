@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import ChromaGrid, { ChromaItem } from "./ChromaGrid";
+import dynamic from "next/dynamic";
+
+const GhostCursor = dynamic(() => import("./GhostCursor"), { ssr: false });
 
 export default function TeamSection() {
   const items: ChromaItem[] = [
@@ -36,8 +39,15 @@ export default function TeamSection() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden py-20">
+      {/* GhostCursor Background */}
+      <GhostCursor color="#E8C5E8" brightness={0.35} bloomStrength={0.03} />
+      
+      {/* Edge Fade Masks for GhostCursor */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent pointer-events-none" style={{ zIndex: 5 }} />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" style={{ zIndex: 5 }} />
+      
       {/* Background Effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900/50 to-black pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40 pointer-events-none" />
       
       <div className="relative w-full max-w-7xl mx-auto px-8 lg:px-12 z-10">
         

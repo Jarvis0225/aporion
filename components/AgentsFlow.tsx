@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Mic, Eye, Fingerprint, Zap, Speaker, MessageSquare, Cpu } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const GhostCursor = dynamic(() => import("./GhostCursor"), { ssr: false });
 
 // InputCard: 强制最大宽度 max-w-[300px]，内容靠右对齐
 const InputCard = ({ icon: Icon, label, sub }: { icon: any, label: string, sub: string }) => (
@@ -32,6 +35,12 @@ const OutputCard = ({ icon: Icon, label, sub }: { icon: any, label: string, sub:
 export default function AgentsFlow() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden py-20">
+      {/* GhostCursor Background */}
+      <GhostCursor color="#E8C5E8" brightness={0.35} bloomStrength={0.03} />
+      
+      {/* Edge Fade Mask for GhostCursor */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent pointer-events-none" style={{ zIndex: 5 }} />
+      
       {/* Background Glow - More Subtle */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-gradient-to-r from-[#00F0FF]/5 to-[#FFB347]/5 blur-[100px] rounded-full pointer-events-none" />
 

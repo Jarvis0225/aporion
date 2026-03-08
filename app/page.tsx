@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import AgentsFlow from "@/components/AgentsFlow";
+import VideoSection from "@/components/VideoSection";
 import TeamSection from "@/components/TeamSection";
+import AgentsFlow from "@/components/AgentsFlow";
 import BentoSection from "@/components/BentoSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="flex flex-col bg-void">
       <Navbar />
       <HeroSection />
+      <VideoSection />
       <TeamSection />
       <AgentsFlow />
       <BentoSection />
