@@ -52,7 +52,8 @@ export default function Footer() {
           <div className="flex flex-col items-start text-left">
             <h4 className="text-white font-bold mb-8 text-sm uppercase tracking-wider">Connect</h4>
             <div className="flex gap-5">
-              <a href="#" className="text-zinc-500 hover:text-white transition-colors">
+              {/* Temporarily hidden social links */}
+              {/* <a href="#" className="text-zinc-500 hover:text-white transition-colors">
                 <Twitter size={20} />
               </a>
               <a href="#" className="text-zinc-500 hover:text-white transition-colors">
@@ -60,8 +61,8 @@ export default function Footer() {
               </a>
               <a href="#" className="text-zinc-500 hover:text-white transition-colors">
                 <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-zinc-500 hover:text-white transition-colors">
+              </a> */}
+              <a href="mailto:contact@aporion.ai" className="text-zinc-500 hover:text-white transition-colors">
                 <Mail size={20} />
               </a>
             </div>
@@ -74,10 +75,11 @@ export default function Footer() {
           <p className="text-zinc-600 text-xs">
             © {new Date().getFullYear()} Aporion Inc. All rights reserved.
           </p>
-          <div className="flex gap-8">
+          {/* Temporarily hidden until ready */}
+          {/* <div className="flex gap-8">
             <a href="#" className="text-zinc-600 hover:text-zinc-400 text-xs transition-colors">Privacy Policy</a>
             <a href="#" className="text-zinc-600 hover:text-zinc-400 text-xs transition-colors">Terms of Service</a>
-          </div>
+          </div> */}
         </div>
 
       </div>
